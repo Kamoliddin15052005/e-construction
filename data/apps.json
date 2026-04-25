@@ -1,0 +1,280 @@
+[
+  {
+    "id": "QB-2024-001",
+    "loyiha": "Navruz-Servis 16-qavatli turar-joy majmuasi",
+    "tadbirkor": "MChJ \"Navruz-Servis Qurilish\"",
+    "manzil": "Toshkent, Yunusobod t., Navruz ko'ch. 12",
+    "tur": "Ko'p qavatli turar-joy (≥5 qavat)",
+    "qavatlar": 16,
+    "bosqich": "qurilish",
+    "sana": "2024-03-15",
+    "holat": "rad_keyin_tasdiq",
+    "mezon_ballari": {
+      "san1": 4,
+      "san2": 4,
+      "san3": 3,
+      "san4": 4,
+      "san5": 3,
+      "yong1": 2,
+      "yong2": 2,
+      "yong3": 3,
+      "yong4": 2,
+      "yong5": 3,
+      "eko1": 3,
+      "eko2": 4,
+      "eko3": 2,
+      "eko4": 3,
+      "eko5": 3,
+      "qur1": 3,
+      "qur2": 4,
+      "qur3": 3,
+      "qur4": 3,
+      "qur5": 3
+    },
+    "organlar": [
+      {
+        "nom": "Sanitariya-Epidemiologiya Inspeksiyasi",
+        "qaror_1": "rad",
+        "sabab_1": "Sanitariya himoya zona masofasi talabga mos emas (15m, norma 25m). Loyihada suv oqova tizimi sxemasi to'liq ko'rsatilmagan. Chiqindi saqlash kamerasi loyihaga kiritilmagan.",
+        "qaror_2": "tasdiq",
+        "sabab_2": "Sanitariya himoya zona masofasi talabga mos. Suv oqova tizimi loyihada ko'rsatilgan."
+      },
+      {
+        "nom": "Yong'in Xavfsizligi Inspeksiyasi",
+        "qaror_1": "rad",
+        "sabab_1": "Yong'in o'chirish tizimi (sprinkler) loyihada yo'q. Evakuatsiya zinasi kengligi 0.9m — normadan past (1.2m talab). 9-15 qavatlar uchun avtomatik signal tizimi ko'rsatilmagan.",
+        "qaror_2": "tasdiq",
+        "sabab_2": "Yong'in o'chirish tizimi loyihaga qo'shildi. Evakuatsiya zinasi 1.2m ga kengaytirildi."
+      },
+      {
+        "nom": "Ekologiya Inspeksiyasi",
+        "qaror_1": "tasdiq",
+        "sabab_1": "",
+        "qaror_2": "tasdiq",
+        "sabab_2": ""
+      },
+      {
+        "nom": "Qurilish Bosh Inspeksiyasi",
+        "qaror_1": "rad",
+        "sabab_1": "Mustahkamlik ekspertizasi xulosasi yo'q. Seysmik bardoshlilik hisob-kitoblari loyihada to'liq emas.",
+        "qaror_2": "tasdiq",
+        "sabab_2": "Mustahkamlik xulosasi taqdim etildi. Seysmik hisob-kitoblar to'ldirildi."
+      }
+    ],
+    "rad_hujjat": "16-qavatli turar-joy binosi loyihasi. Umumiy yer maydoni 0.42 ga. 128 ta xonadon. Poydevor: plitali temir-beton. Tashqi devor: g'isht va penoplex izolyatsiya. Liftlar: 2 dona. Zina: 2 dona kenglik 0.9 metr. Yong'in o'chirish tizimi loyihada ko'rsatilmagan. Sanitariya zona masofasi 15 metr. Suv oqova tizimi loyihaga kiritilmagan. Seysmik zona 8 ball, hisob-kitoblar to'liq emas. Mustahkamlik xulosasi taqdim etilmagan.",
+    "tasdiq_hujjat": "16-qavatli turar-joy binosi loyihasi. Umumiy yer maydoni 0.42 ga. 128 ta xonadon. Poydevor: plitali temir-beton. Tashqi devor: g'isht va penoplex izolyatsiya. Liftlar: 2 dona. Zina: 2 dona kenglik 0.9 metr. Yong'in o'chirish tizimi loyihada ko'rsatilmagan. Sanitariya zona masofasi 15 metr. Suv oqova tizimi loyihaga kiritilmagan. Seysmik zona 8 ball, hisob-kitoblar to'liq emas. Mustahkamlik xulosasi taqdim etilmagan.",
+    "reviews": [
+      {
+        "ism": "Aziz N.",
+        "baho": 2,
+        "fikr": "Liftlar ishlamayapti, zina juda tor. Qurilish sifati yomon",
+        "sana": "2024-09-10"
+      },
+      {
+        "ism": "Malika R.",
+        "baho": 1,
+        "fikr": "Yong'in sensori yo'q umuman! Xavfli bino. Shikoyat qilaman",
+        "sana": "2024-09-15"
+      },
+      {
+        "ism": "Jahongir T.",
+        "baho": 2,
+        "fikr": "Derazalar sifatsiz. Issiqlik yo'qoladi. Va'da qilingan narsalar yo'q",
+        "sana": "2024-09-20"
+      },
+      {
+        "ism": "Nodira K.",
+        "baho": 1,
+        "fikr": "Kanalizatsiya muammosi bor. Hid keladi. Inspeksiya qilish kerak!",
+        "sana": "2024-10-01"
+      },
+      {
+        "ism": "Sardor M.",
+        "baho": 2,
+        "fikr": "Suv bosimi past. Yuqori qavatlar azob chekmoqda",
+        "sana": "2024-10-05"
+      }
+    ],
+    "ai_tahlil": {
+      "sana": "2026-04-25 23:52",
+      "daraja": "🔴 YUQORI XAVF",
+      "ball": 83,
+      "alomatlar_soni": 3
+    },
+    "_doc_sim": 1.0
+  },
+  {
+    "id": "QB-2024-002",
+    "loyiha": "Chilonzor Biznes-Markaz 9-qavatli ofis binosi",
+    "tadbirkor": "AJ \"CityBuild Invest\"",
+    "manzil": "Toshkent, Chilonzor t., Bunyodkor sh.yo'li 45",
+    "tur": "Tijorat binosi",
+    "qavatlar": 9,
+    "bosqich": "foydalanish",
+    "sana": "2024-05-20",
+    "holat": "tasdiq",
+    "mezon_ballari": {
+      "san1": 5,
+      "san2": 5,
+      "san3": 4,
+      "san4": 5,
+      "san5": 4,
+      "yong1": 5,
+      "yong2": 5,
+      "yong3": 5,
+      "yong4": 5,
+      "yong5": 4,
+      "eko1": 4,
+      "eko2": 4,
+      "eko3": 4,
+      "eko4": 4,
+      "eko5": 4,
+      "qur1": 5,
+      "qur2": 5,
+      "qur3": 4,
+      "qur4": 5,
+      "qur5": 5
+    },
+    "organlar": [
+      {
+        "nom": "Sanitariya-Epidemiologiya",
+        "qaror_1": "tasdiq",
+        "sabab_1": "",
+        "qaror_2": "tasdiq",
+        "sabab_2": ""
+      },
+      {
+        "nom": "Yong'in Xavfsizligi",
+        "qaror_1": "tasdiq",
+        "sabab_1": "",
+        "qaror_2": "tasdiq",
+        "sabab_2": ""
+      },
+      {
+        "nom": "Ekologiya",
+        "qaror_1": "tasdiq",
+        "sabab_1": "",
+        "qaror_2": "tasdiq",
+        "sabab_2": ""
+      },
+      {
+        "nom": "Qurilish Inspeksiyasi",
+        "qaror_1": "tasdiq",
+        "sabab_1": "",
+        "qaror_2": "tasdiq",
+        "sabab_2": ""
+      }
+    ],
+    "rad_hujjat": "",
+    "tasdiq_hujjat": "9-qavatli ofis binosi loyihasi. Maydon 0.18 ga. Poydevor: monolitik. Yong'in: sprinkler va signal va gidrant to'liq. Evakuatsiya: 3 ta zina kenglik 1.4 metr. Seysmik hisob-kitob 8 ball, REI-90. Ko'kalamzor 22 foiz. Mustahkamlik xulosasi mavjud. Material sertifikatlari taqdim etilgan.",
+    "reviews": [
+      {
+        "ism": "Bekzod O.",
+        "baho": 5,
+        "fikr": "Ajoyib bino. Barcha talablar bajarilgan",
+        "sana": "2024-11-01"
+      },
+      {
+        "ism": "Dilnoza A.",
+        "baho": 4,
+        "fikr": "Yaxshi, faqat parking kichikroq",
+        "sana": "2024-11-10"
+      },
+      {
+        "ism": "Farrux H.",
+        "baho": 5,
+        "fikr": "Hammasi zo'r. Sifatli qurilish",
+        "sana": "2024-11-15"
+      }
+    ],
+    "ai_tahlil": null,
+    "_doc_sim": null
+  },
+  {
+    "id": "QB-2024-003",
+    "loyiha": "Elite-Home 12-qavatli Mirzo-Ulug'bek turar-joy",
+    "tadbirkor": "MChJ \"Premium Construction\"",
+    "manzil": "Toshkent, Mirzo-Ulug'bek t., Qoratosh ko'ch. 8",
+    "tur": "Ko'p qavatli turar-joy (≥5 qavat)",
+    "qavatlar": 12,
+    "bosqich": "foydalanish",
+    "sana": "2024-07-10",
+    "holat": "rad_keyin_tasdiq",
+    "mezon_ballari": {
+      "san1": 3,
+      "san2": 3,
+      "san3": 2,
+      "san4": 3,
+      "san5": 2,
+      "yong1": 1,
+      "yong2": 2,
+      "yong3": 2,
+      "yong4": 1,
+      "yong5": 2,
+      "eko1": 3,
+      "eko2": 2,
+      "eko3": 2,
+      "eko4": 2,
+      "eko5": 2,
+      "qur1": 2,
+      "qur2": 3,
+      "qur3": 2,
+      "qur4": 3,
+      "qur5": 2
+    },
+    "organlar": [
+      {
+        "nom": "Sanitariya-Epidemiologiya",
+        "qaror_1": "rad",
+        "sabab_1": "Sanitariya zona 12m, norma 25m. Suv oqova tizimi sxemasi yo'q.",
+        "qaror_2": "tasdiq",
+        "sabab_2": "Sanitariya zona 12m. Suv oqova loyihaga qo'shildi."
+      },
+      {
+        "nom": "Yong'in Xavfsizligi",
+        "qaror_1": "rad",
+        "sabab_1": "Sprinkler tizimi yo'q. Evakuatsiya zinasi 1 ta, kenglik 0.8m. Sensor yo'q.",
+        "qaror_2": "tasdiq",
+        "sabab_2": "Yong'in tizimi va evakuatsiya yo'llari loyihaga qo'shildi."
+      },
+      {
+        "nom": "Ekologiya",
+        "qaror_1": "rad",
+        "sabab_1": "Ko'kalamzor 8%, norma 20%. Chiqindi utilizatsiya shartnomasi yo'q.",
+        "qaror_2": "tasdiq",
+        "sabab_2": "Ko'kalamzor va chiqindi masalalari hal etildi."
+      },
+      {
+        "nom": "Qurilish Inspeksiyasi",
+        "qaror_1": "rad",
+        "sabab_1": "Mustahkamlik xulosasi yo'q. Seysmik hisob-kitob to'liq emas. Material sertifikatlari taqdim etilmagan.",
+        "qaror_2": "tasdiq",
+        "sabab_2": "Mustahkamlik xulosasi va seysmik hisob-kitob taqdim etildi."
+      }
+    ],
+    "rad_hujjat": "12-qavatli turar-joy binosi loyihasi. 96 ta xonadon. Poydevor: plitali. Devor: g'isht. Zina: 1 dona kenglik 0.8 metr. Lift: 1 dona. Yong'in o'chirish tizimi loyihada ko'rsatilmagan. Sanitariya zona 12 metr. Ko'kalamzor 8 foiz. Seysmik hisob-kitob yo'q. Material sertifikat yo'q. Mustahkamlik xulosasi taqdim etilmagan.",
+    "tasdiq_hujjat": "12-qavatli turar-joy binosi loyihasi. 96 ta xonadon. Poydevor: plitali. Devor: g'isht. Zina: 1 dona kenglik 0.8 metr. Lift: 1 dona. Yong'in o'chirish tizimi loyihada ko'rsatilmagan. Sanitariya zona 12 metr. Ko'kalamzor 8 foiz. Seysmik hisob-kitob yo'q. Material sertifikat yo'q. Mustahkamlik xulosasi taqdim etilmagan.",
+    "reviews": [
+      {
+        "ism": "Ulmas V.",
+        "baho": 1,
+        "fikr": "Dahshat. Bino qurilayotganda ham muammo bor edi, endi aholini joylashtirmoqchi",
+        "sana": "2024-10-20"
+      },
+      {
+        "ism": "Zulfiya M.",
+        "baho": 1,
+        "fikr": "Yong'in signali yo'q! Bolalarim bilan xavfli binoda yashamayman",
+        "sana": "2024-10-25"
+      },
+      {
+        "ism": "Sherzod B.",
+        "baho": 2,
+        "fikr": "Sifat past. Derazalar va eshiklar arzon material",
+        "sana": "2024-11-01"
+      }
+    ],
+    "ai_tahlil": null,
+    "_doc_sim": null
+  }
+]
