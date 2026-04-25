@@ -1,95 +1,153 @@
-# 🏗️ E-Construction Anti-Korrupsiya Tizimi
+# 🏗️ E-Construction — Korrupsiyaga qarshi AI tizimi
 
-Qurilish ruxsatnomalari jarayonidagi korrupsion holatlarni AI yordamida aniqlash tizimi.
+Qurilish sohasidagi korrupsiyani 3 usulda avtomatik aniqlaydi:
+1. **Hujjat taqqoslash** — rad etilgan va tasdiqlangan hujjatlar bir xilmi?
+2. **20 mezon baholash** — loyiha past ball olgan bo'lsa ham tasdiqlanganligi
+3. **Foydalanuvchi fikrlari** — aholi bahosi rasmiy xulosaga zidmi?
 
-## 📋 Loyiha haqida
+---
 
-Bu tizim qurilish ruxsatnomalari jarayonida:
-1. **20 mezon** bo'yicha loyihani avtomatik baholaydi
-2. **Vakolatli organlar** qarorlari bilan taqqoslaydi  
-3. **Rad etish ~ O'zgartirishlar** nomutanosibligini aniqlaydi
-4. **Foydalanuvchi baholari** bilan solishtirib korrupsiyani topadi
+## 🚀 Ishga tushirish
 
-## 🚀 O'rnatish va Ishga Tushirish
-
-### 1. Kerakli kutubxonalarni o'rnatish
 ```bash
 pip install -r requirements.txt
-```
-
-### 2. Ishga tushirish
-```bash
 streamlit run app.py
 ```
 
-### 3. HuggingFace Token (AI uchun)
-1. [huggingface.co](https://huggingface.co) ga boring
-2. Bepul ro'yxatdan o'ting
-3. Settings → Access Tokens → New Token (Read) yarating
-4. Tizimda ⚙️ Sozlamalar → AI Sozlamalari bo'limiga kiriting
+---
 
-## 📁 Fayl Strukturasi
+## 🤗 HuggingFace Token ulash (MUHIM)
+
+### Nima uchun token kerak?
+Token bo'lmasa ham dastur ishlaydi (Jaccard fallback usuli bilan),
+lekin token ulansa semantik AI tahlil aniqroq bo'ladi.
+
+### Token olish — qadamba-qadam:
+
+**1-qadam:** https://huggingface.co ga kiring (ro'yxatdan o'ting)
+
+**2-qadam:** Yuqori o'ng burchakda profilingizga kiring:
+```
+Profile → Settings → Access Tokens
+```
+
+**3-qadam:** "New token" tugmasini bosing:
+- **Name:** e-construction  
+- **Role:** `Read` (yozish huquqi shart emas)
+- "Generate token" bosing
+
+**4-qadam:** Tokenni nusxalab oling:
+```
+hf_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+```
+⚠️ Bu tokenni biror joyga saqlang — bir marta ko'rsatiladi!
+
+---
+
+## 🔐 Token ulash — 2 usul
+
+### Usul A — Streamlit Cloud (deployment uchun)
+Streamlit Cloud da:
+```
+App settings → Secrets → quyidagini qo'shing:
+```
+```toml
+HF_TOKEN = "hf_sizning_tokeningiz"
+```
+
+### Usul B — Lokal ishlatish uchun
+`.streamlit/secrets.toml` faylini yarating:
+```toml
+HF_TOKEN = "hf_sizning_tokeningiz"
+```
+
+Yoki terminal orqali:
+```bash
+export HF_TOKEN="hf_sizning_tokeningiz"
+streamlit run app.py
+```
+
+---
+
+## 🤖 Qaysi model — va nima uchun?
+
+### Tanlangan model: `paraphrase-multilingual-MiniLM-L12-v2`
+
+| Xususiyat | Qiymat |
+|-----------|--------|
+| Til qo'llovi | O'zbek, Rus, Ingliz (50+ til) |
+| Hajmi | 118 MB — yengil |
+| Aniqlik | Semantic o'xshashlikda juda aniq |
+| Narxi | **Mutlaqo bepul** |
+| API cheklovi | Kunda 30,000 so'rov (bepul hisob) |
+
+### Nima uchun bu model optimal?
+- Ko'p qavatli arxitektura (12 qavat transformer)
+- Hujjat semantikasini tushunadi — nafaqat so'z sanoq
+- O'zbek va Rus tilida yaxshi ishlaydi
+- HuggingFace Inference API orqali token kerak emas ham (bepul tier)
+
+### Bepul tier cheklovlari:
+- Kunda ~30,000 so'rov
+- Ba'zan 10-30 soniya kechikish (model "uxlab" qoladi)
+- Birinchi so'rovda model yuklanadi (~10-20 soniya)
+
+### Agar token bo'lmasa nima bo'ladi?
+Dastur **Jaccard similarity** (so'z ustma-ustma kelishi) usulini ishlatadi.
+Bu ham ishlaydi, lekin semantik tahlil kamroq aniq bo'ladi.
+
+---
+
+## 📊 20 Mezon tuzilmasi
+
+| Bo'lim | Mezon soni | Maks ball |
+|--------|-----------|-----------|
+| Sanitariya-Epidemiologiya | 5 | 21 |
+| Yong'in Xavfsizligi | 5 | 22 |
+| Ekologiya | 5 | 18 |
+| Qurilish Bo'limi | 5 | 23 |
+| **Jami** | **20** | **84** |
+
+---
+
+## ⚠️ Xavf belgilari
+
+| Signal | Shart | Natija |
+|--------|-------|--------|
+| 🔴 Hujjat | Rad vs tasdiq ≥ 92% o'xshash | Ariza qizilga kiradi |
+| 🔴 Mezon | Ball < 60% + tasdiq berilgan | Ariza qizilga kiradi |
+| 🔴 Fikr | Foydalanuvchi ≤ 2.5 ball + rasmiy tasdiq | Ariza qizilga kiradi |
+
+---
+
+## 📁 Fayl tuzilmasi
 
 ```
-e-construction/
-├── app.py                    # Asosiy Streamlit ilovasi
-├── requirements.txt          # Kutubxonalar
-├── pages/
-│   ├── home.py              # Bosh sahifa
-│   ├── application.py       # Ariza kiritish
-│   ├── ai_analysis.py       # AI tahlil
-│   ├── corruption_detector.py # Korrupsiya detektori
-│   ├── user_reviews.py      # Foydalanuvchi baholari
-│   ├── dashboard.py         # Statistika
-│   └── settings.py          # Sozlamalar
-├── utils/
-│   ├── criteria_engine.py   # 20 mezon logikasi
-│   ├── ai_analyzer.py       # HuggingFace AI
-│   └── data_store.py        # Ma'lumotlar saqlash
+e_construction/
+├── app.py                    ← Asosiy dastur
+├── requirements.txt          ← Kutubxonalar
+├── .gitignore
+├── .streamlit/
+│   └── secrets.toml          ← HF_TOKEN (GitHub ga yuklamang!)
 └── data/
-    └── applications.json    # Ma'lumotlar bazasi (demo)
+    └── applications.json     ← Saqlangan ma'lumotlar
 ```
 
-## 🤖 AI Texnologiyasi
+---
 
-### Bepul HuggingFace Modellari:
-| Model | Tavsif |
-|-------|--------|
-| Mistral-7B-Instruct | Eng yaxshi sifat, ko'p tilli |
-| Phi-3-mini | Tez, engil, samarali |
-| Zephyr-7B | Yaxshi instruksiya bajaradi |
+## 🚀 Streamlit Cloud ga deploy qilish
 
-### Mahalliy Tahlil (Internet siz):
-- Rule-based scoring (20 mezon)
-- Kalit so'z tahlili (O'zbek tili)
-- Pattern matching algoritmi
-
-## 📊 Korrupsiya Aniqlash Algoritmi
-
-Tizim **3 ta signal** ni taqqoslaydi:
-
-```
-Korrupsiya Bali = 
-  (Mezon balli anomaliyasi × 0.5) +
-  (Rad etish ~ O'zgartirishlar nomutanosibligi × 0.3) +
-  (Foydalanuvchi bahosi anomaliyasi × 0.2)
+```bash
+# GitHub ga yuklang
+git init
+git add . 
+git add -f .streamlit/  # secrets.toml yuklamang!
+git commit -m "E-Construction AI"
+git push origin main
 ```
 
-### Signal qoidalari:
-- 🔴 **70+** → Jiddiy korrupsion xavf (Darhol tekshiruv)
-- 🟠 **40-70** → O'rta xavf (Qo'shimcha tekshiruv)
-- 🟡 **20-40** → Past xavf (Kuzatib borish)
-- 🟢 **0-20** → Xavf yo'q
-
-## 🏗️ Ishlab chiqarish uchun
-
-```python
-# .env fayl yarating
-SUPABASE_URL=your_supabase_url
-SUPABASE_KEY=your_supabase_key
-HF_TOKEN=hf_your_token_here
-MY_GOV_UZ_API=your_api_key
-```
-
-## 📞 Bog'lanish
-E-Construction Jamoasi | O'zbekiston Respublikasi | 2025
+Keyin:
+1. https://share.streamlit.io ga kiring
+2. "New app" → GitHub reponi tanlang
+3. **Secrets bo'limiga HF_TOKEN kiriting**
+4. Deploy!
